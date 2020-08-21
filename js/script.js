@@ -29,13 +29,7 @@ function apiCall(){
         const resGenre=data.Genre
         const resRuntime=data.Runtime
         const resCountry=data.Country
-        const resProduction=data.Production
         const resAwards=data.Awards
-        
-
-        // var divContainer=$("<div>")
-        // divContainer.attr("class","container")
-        // $(".content").append(divContainer)
 
 
 
@@ -60,6 +54,11 @@ function apiCall(){
         var h3TitleEl=$("<h3>")
         h3TitleEl.text(resTitle+" "+"("+resYear+")") 
         $(divCol2).append(h3TitleEl)
+
+        var pTitleSub=$("<p>")
+        pTitleSub.text(resRated+" | "+resGenre+" | "+resRuntime)
+        $(divCol2).append(pTitleSub)
+
 
         var pDirectorLabelEl=$("<p>")
         pDirectorLabelEl.text("Director")
@@ -86,30 +85,7 @@ function apiCall(){
         pPlotEl.text(resPlot)
         $(divCol2).append(pPlotEl)
 
-        var pRatedLabelEl=$("<p>")
-        pRatedLabelEl.text("Rated")
-        pRatedLabelEl.attr("class", "response-label")
-        $(divCol2).append(pRatedLabelEl) 
-        var pRatedEl=$("<p>")
-        pRatedEl.text(resRated)
-        $(divCol2).append(pRatedEl)
-
-        var pGenreLabelEl=$("<p>")
-        pGenreLabelEl.text("Genre")
-        pGenreLabelEl.attr("class", "response-label")
-        $(divCol2).append(pGenreLabelEl) 
-        var pGenreEl=$("<p>")
-        pGenreEl.text(resGenre)
-        $(divCol2).append(pGenreEl)
-
-
-        var pRuntimeLabelEl=$("<p>")
-        pRuntimeLabelEl.text("Runtime")
-        pRuntimeLabelEl.attr("class", "response-label")
-        $(divCol2).append(pRuntimeLabelEl)
-        var pRuntimeEl=$("<p>")
-        pRuntimeEl.text(resRuntime)
-        $(divCol2).append(pRuntimeEl)
+    
 
         var pCountryLabelEl=$("<p>")
         pCountryLabelEl.text("Country")
@@ -129,7 +105,27 @@ function apiCall(){
 
 
         divRow.append(divCol2)
-        
+        var searchTrailer=resTitle+" "+resYear+ " trailer"
+        var urlyoutube="https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q="+searchTrailer+"&key=AIzaSyBPEJPstEOICq_6g87F5v_fd4XGIAK9i_w"
+            $.ajax({
+                url: urlyoutube,
+                method: "GET"
+            }).then(function(response){
+                
+                console.log(response)
+
+                var buttonEl=$("<button>")
+                buttonEl.attr("class", "view-trailer-button")
+                buttonEl.text("View Trailer")
+
+                var aEl=$("<a>")
+                aEl.attr("href","https://www.youtube.com/watch?v="+response.items[0].id.videoId)
+                aEl.attr("target", "_blank")
+                $(divCol2).append(aEl)
+                $(aEl).append(buttonEl)
+                
+                
+            })
 
         
         
