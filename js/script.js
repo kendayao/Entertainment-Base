@@ -2,7 +2,6 @@
 
 $(".find-button").on("click", function(event){
     event.preventDefault();
-    if($(".find-input").val(""))
     $(".content").empty()
     apiCall()
     
@@ -17,33 +16,41 @@ function apiCall(){
         url: queryURL,
         method: "GET"
     }).then(function(data){
-        $(".find-input").val("");
+        $(".find-input").val("")
+        console.log(data)
+        
 
         var divContainer=$("<div>")
         divContainer.attr("class","container")
         $(".content").append(divContainer)
+
+
+
         var divRow=$("<div>")
         divRow.attr("class","row")
-        divContainer.append(divRow)
-        var divCol=$("div")
-        divCol.attr("class","col-md-6")
-        divRow.append(divCol)
+        $(divContainer).append(divRow)
+        var divCol1=$("<div>")
+        divCol1.attr("class","col-md-6")
+        $(divRow).append(divCol1)
         var imgEl=$("<img>")
-        imgEl.attr("src", data.Poster)
-        imgEl.attr("class", "movie-image")
-        imgEl.attr("alt", "movie-poster")
-        $(divCol).append(imgEl)
+        imgEl.attr({src: data.Poster,
+        class: "movie-image",
+        alt: "movie-poster"})
+        $(divCol1).append(imgEl)
 
-        // var divCol2=$("div")
-        // divCol2.attr("class","col-md-6")
-        // var h3El=$("<h3>")
-        // h3El.text(data.Title)
-        // $(divCol2).append(h3El)
-        // divRow.append(divCol2)
+
+
+
+        var divCol2=$("<div>")
+        divCol2.attr("class","col-md-6")
+        var h3El=$("<h3>")
+        h3El.text(data.Title)
+        $(divCol2).append(h3El)
+        divRow.append(divCol2)
         
 
         
-        console.log(data)
+        
     }).catch(function(error){
     console.log(error)
     })
