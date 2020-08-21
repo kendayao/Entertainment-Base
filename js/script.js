@@ -111,18 +111,36 @@ function apiCall(){
                 url: urlyoutube,
                 method: "GET"
             }).then(function(response){
-                
+                $(".modal-body").empty()
                 console.log(response)
 
-                var buttonEl=$("<button>")
-                buttonEl.attr("class", "view-trailer-button")
-                buttonEl.text("View Trailer")
+                // var buttonEl=$("<button>")
+                // buttonEl.attr("class", "view-trailer-button")
+                // buttonEl.text("View Trailer")
 
-                var aEl=$("<a>")
-                aEl.attr("href","https://www.youtube.com/watch?v="+response.items[0].id.videoId)
-                aEl.attr("target", "_blank")
-                $(divCol2).append(aEl)
-                $(aEl).append(buttonEl)
+                // var aEl=$("<a>")
+                // aEl.attr("href","https://www.youtube.com/watch?v="+response.items[0].id.videoId)
+                // aEl.attr("target", "_blank")
+                // $(divCol2).append(aEl)
+                // $(aEl).append(buttonEl)
+
+                // <iframe width="560" height="315" src="https://www.youtube.com/embed/HKH7_n425Ss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                var buttonEl=$("<button>")
+                buttonEl.attr("data-toggle","modal")
+                buttonEl.attr("data-target","#trailerModal")
+                buttonEl.text("View Trailer")
+                $(divCol2).append(buttonEl)
+
+                var iframeEl=$("<iframe>")
+                iframeEl.attr({
+                    width: "415",
+                    height: "250",
+                    src: "https://www.youtube.com/embed/"+response.items[0].id.videoId,
+                    frameborder: "0",
+                    allow: "acclerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                })
+                $(".modal-body").append(iframeEl)
                 
                 
             })
