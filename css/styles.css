@@ -1,0 +1,17 @@
+.search-details{
+    text-align: center;
+}
+
+.response-label{
+    margin-bottom: 0px;
+    font-weight: bold
+}
+
+.search-image{
+    text-align: center;
+}
+
+.movie-image{
+    width: 375px;
+    height: 522px;
+}
