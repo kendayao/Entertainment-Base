@@ -1,8 +1,21 @@
 /* #2d3436 */
 /* #e6b31e */
+/* #fafafa */
+
+body{
+    color: black;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+
+}
+
+
 
 .page-title{
     font-family: 'Russo One', sans-serif;
+    font-size: 280%;
+    color: #fafafa;
+    margin-left: auto;
 }
 
 .page-logo{
@@ -27,4 +40,28 @@
 .movie-image{
     width: 375px;
     height: 522px;
+}
+
+
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.701),rgba(0, 0, 0, 0.701)),url(../images/popcorn.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    text-align: center;;
+}
+
+
+h2{
+    color: #fafafaac;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 500%;
+    padding: 9% 7% 4% 7%;
+}
+
+
+.row{
+    margin : 10% 7%;
 }

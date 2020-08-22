@@ -4,7 +4,7 @@ $(".find-button").on("click", function(event){
     event.preventDefault();
     $(".content").empty()
     apiCall()
-    
+    $('html, body').animate({scrollTop:$("#info-section").offset().top},1000)
 })
 
 
