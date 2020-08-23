@@ -66,6 +66,17 @@ h2{
 
 
 
+.back-search{
+    position: absolute;
+    right: 10px;
+    margin-top: 10px;
+    color: #e6b41e7c;
+    font-size: 15px
+}
+
+.back-search:hover{
+    color:#171717
+}
 
 .row{
     padding: 8% 5%;
@@ -97,6 +108,24 @@ h3{
     font-size: 18px;
 }
 
+.trailer-button {
+    background-color: #2d3436;
+    color: #e6b31e;
+    padding: 5px;;
+    border-radius: 5px;
+}
+
+.trailer-button:hover{
+    background-color: #000000
+}
+
+.trailer-button:focus {
+    outline:none
+}
+
+
+
+
 .search-image{
     text-align: center;
 }
@@ -106,8 +135,35 @@ h3{
     height: 522px;
 }
 
+
+.modal-content{
+    background-color: #2d3436;
+    color: #e6b31e;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 770px) {
    .search-details {
       padding-top: 15%;
+    }
+
+    .row{
+        padding-top: 22%;
     }
   }

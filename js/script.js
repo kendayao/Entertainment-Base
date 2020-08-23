@@ -31,7 +31,11 @@ function apiCall(){
         const resCountry=data.Country
         const resAwards=data.Awards
 
-
+        var aEl=$("<a>")
+        aEl.attr("href", "#header-section")
+        aEl.attr("class", "back-search")
+        aEl.text("Back to Search")
+        $(".content").append(aEl)
 
         var divRow=$("<div>")
         divRow.attr("class","row")
@@ -45,7 +49,7 @@ function apiCall(){
         alt: "movie-poster"})
         $(divCol1).append(imgEl)
 
-
+        
 
 
         var divCol2=$("<div>")
@@ -135,19 +139,21 @@ function apiCall(){
                 var buttonEl=$("<button>")
                 buttonEl.attr("data-toggle","modal")
                 buttonEl.attr("data-target","#trailerModal")
+                buttonEl.attr("class","trailer-button")
                 buttonEl.text("View Trailer")
                 $(divCol2).append(buttonEl)
 
                 var iframeEl=$("<iframe>")
                 iframeEl.attr({
-                    width: "415",
-                    height: "250",
+                    width: "100%",
+                    height: "250px",
                     src: "https://www.youtube.com/embed/"+response.items[0].id.videoId,
                     frameborder: "0",
                     allow: "acclerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 })
                 $(".modal-body").append(iframeEl)
                 
+                $(".modal-title").text(resTitle+" Trailer")
                 
             })
 
