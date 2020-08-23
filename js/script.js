@@ -22,7 +22,7 @@ $(".find-button").on("click", function(event){
 // Call omdb api
 function apiCall(){
     const title=$(".find-input").val().toLowerCase().trim()
-    const queryURL="http://www.omdbapi.com/?t="+title+"&apikey=9c268223"
+    const queryURL="https://www.omdbapi.com/?t="+title+"&apikey=9c268223"
     $.ajax({
         url: queryURL,
         method: "GET"
