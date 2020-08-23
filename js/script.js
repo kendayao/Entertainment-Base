@@ -2,6 +2,10 @@
 // hide Please enter movie title alert
 $(".alert").css("display", "none")
 
+var date=new Date()
+var currentYear=date.getFullYear()
+$(".current-year").text(currentYear)
+
 // When search button is clicked
 $(".find-button").on("click", function(event){
     event.preventDefault();
