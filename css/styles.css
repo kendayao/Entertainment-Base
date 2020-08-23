@@ -6,7 +6,7 @@ body{
     color: black;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
-
+    font-family: 'PT Sans', sans-serif;
 }
 
 
@@ -24,22 +24,22 @@ body{
 
 
 
-.search-details{
-    text-align: center;
+input{
+    border-radius: 5px;
+    padding: 7px;
+    margin-right: 5px;
 }
 
-.response-label{
-    margin-bottom: 0px;
-    font-weight: bold
+form button{
+    background-color:#2d3436 ;
+    color: #e6b31e;
+    padding: 5px;
+    border-radius: 3px;
+    width: 40px;
 }
 
-.search-image{
-    text-align: center;
-}
-
-.movie-image{
-    width: 375px;
-    height: 522px;
+.search-icon{
+    font-size: 23px;
 }
 
 
@@ -58,10 +58,56 @@ h2{
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
     font-size: 500%;
-    padding: 9% 7% 4% 7%;
+    padding: 18% 7% 4% 7%;
 }
+
+
+
+
+
 
 
 .row{
-    margin : 10% 7%;
+    padding: 8% 5%;
 }
+
+.content{
+    background-color: #2d3436;
+    color: #e6b31e
+}
+
+h3{
+    font-size: 40px;
+    margin-bottom: 0;
+    font-family: 'Russo One', sans-serif;
+}
+
+.search-details{
+    text-align: center;
+}
+
+.response-label{
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: bold
+}
+
+.response-details{
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.search-image{
+    text-align: center;
+}
+
+.movie-image{
+    width: 375px;
+    height: 522px;
+}
+
+@media only screen and (max-width: 770px) {
+   .search-details {
+      padding-top: 15%;
+    }
+  }

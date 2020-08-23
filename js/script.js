@@ -56,6 +56,7 @@ function apiCall(){
         $(divCol2).append(h3TitleEl)
 
         var pTitleSub=$("<p>")
+        pTitleSub.attr("class", "sub-title")
         pTitleSub.text(resRated+" | "+resGenre+" | "+resRuntime)
         $(divCol2).append(pTitleSub)
 
@@ -65,6 +66,7 @@ function apiCall(){
         pDirectorLabelEl.attr("class", "response-label")
         $(divCol2).append(pDirectorLabelEl)
         var pDirectorEl=$("<p>")
+        pDirectorEl.attr("class", "response-details")
         pDirectorEl.text(resDirector)
         $(divCol2).append(pDirectorEl)
 
@@ -73,6 +75,7 @@ function apiCall(){
         pActorsLabelEl.attr("class", "response-label")
         $(divCol2).append(pActorsLabelEl)
         var pActorsEl=$("<p>")
+        pActorsEl.attr("class", "response-details")
         pActorsEl.text(resActors)
         $(divCol2).append(pActorsEl)
 
@@ -82,6 +85,7 @@ function apiCall(){
         pPlotLabelEl.attr("class", "response-label")
         $(divCol2).append(pPlotLabelEl)   
         var pPlotEl=$("<p>")
+        pPlotEl.attr("class", "response-details")
         pPlotEl.text(resPlot)
         $(divCol2).append(pPlotEl)
 
@@ -92,6 +96,7 @@ function apiCall(){
         pCountryLabelEl.attr("class", "response-label")
         $(divCol2).append(pCountryLabelEl)
         var pCountryEl=$("<p>")
+        pCountryEl.attr("class", "response-details")
         pCountryEl.text(resCountry)
         $(divCol2).append(pCountryEl)
 
@@ -100,6 +105,7 @@ function apiCall(){
         pAwardsLabelEl.attr("class", "response-label")
         $(divCol2).append(pAwardsLabelEl)
         var pAwardsEl=$("<p>")
+        pAwardsEl.attr("class", "response-details")
         pAwardsEl.text(resAwards)
         $(divCol2).append(pAwardsEl)
 
