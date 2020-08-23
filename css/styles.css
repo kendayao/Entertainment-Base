@@ -34,6 +34,7 @@ input{
     border-radius: 5px;
     padding: 7px;
     margin-right: 5px;
+    width: 30%
 }
 
 form button{
@@ -154,6 +155,7 @@ h5{
 
 .search-image{
     text-align: center;
+    width: 100%;
 }
 
 .movie-image{
@@ -169,6 +171,7 @@ h5{
     background-color: #2d3436;
     color: #e6b31e;
     font-family: 'PT Sans', sans-serif;
+    width: 100%;
 }
 
 .close-modal-button{
@@ -229,3 +232,36 @@ footer p:first-child{
         padding-top: 22%;
     }
   }
+
+  @media only screen and (max-width: 480px){
+    .search-details {
+        padding-top: 15%;
+      }
+  
+      .row{
+          padding-top: 22%;
+      }
+      .navbar-brand{
+          font-size: 16px;
+      }
+      h2{
+          padding-top: 50%;
+          font-size: 50px;
+      }
+      input{
+          width: 46%;
+      }
+      .movie-image{
+          padding-right: 45px;
+      }
+      .modal-content{
+          width: 95%;
+      }
+      
+
+
+
+
+
+    }
+  
