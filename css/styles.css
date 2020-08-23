@@ -93,6 +93,11 @@ h3{
     font-family: 'Russo One', sans-serif;
 }
 
+h5{
+    font-family: 'Russo One', sans-serif;
+    font-size: 30px
+}
+
 .search-details{
     text-align: center;
 }
@@ -136,13 +141,32 @@ h3{
 }
 
 
+/* ------------------------------ */
+/* ------------MODAL------------- */
+/* ------------------------------- */
 .modal-content{
     background-color: #2d3436;
     color: #e6b31e;
     font-family: 'PT Sans', sans-serif;
 }
 
+.close-modal-button{
+    color:#e6b31e;
+    background-color: #2d3436
+}
 
+.modal-header{
+    border-bottom: none
+}
+
+.modal-footer{
+    border-top: none
+}
+
+.close-modal-footer-btn{
+    color: #e6b31e;
+    background-color: black
+}
 
 
 
