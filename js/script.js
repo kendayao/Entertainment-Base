@@ -1,10 +1,20 @@
 
+$(".alert").css("display", "none")
+
 
 $(".find-button").on("click", function(event){
     event.preventDefault();
+
+    if($(".find-input").val()===""){
+        $(".alert").css("display", "block")
+        setTimeout(function(){
+            $(".alert").css("display", "none")
+        }, 2000)
+    }else{
     $(".content").empty()
     apiCall()
-    $('html, body').animate({scrollTop:$("#info-section").offset().top},1000)
+    $('html, body').animate({scrollTop:$("#info-section").offset().top},500)
+    }
 })
 
 
@@ -18,6 +28,14 @@ function apiCall(){
     }).then(function(data){
         $(".find-input").val("")
         console.log(data)
+
+
+        if (data.Error==="Movie not found!"){
+            var h3ErrorEl=$("<h3>")
+            h3ErrorEl.attr("class","movie-error")
+            h3ErrorEl.text("Movie Not Found, Please Search Again")
+            $(".content").append(h3ErrorEl)
+        }else{
         
         const resImage=data.Poster
         const resTitle=data.Title
@@ -124,18 +142,6 @@ function apiCall(){
                 $(".modal-body").empty()
                 console.log(response)
 
-                // var buttonEl=$("<button>")
-                // buttonEl.attr("class", "view-trailer-button")
-                // buttonEl.text("View Trailer")
-
-                // var aEl=$("<a>")
-                // aEl.attr("href","https://www.youtube.com/watch?v="+response.items[0].id.videoId)
-                // aEl.attr("target", "_blank")
-                // $(divCol2).append(aEl)
-                // $(aEl).append(buttonEl)
-
-                // <iframe width="560" height="315" src="https://www.youtube.com/embed/HKH7_n425Ss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
                 var buttonEl=$("<button>")
                 buttonEl.attr("data-toggle","modal")
                 buttonEl.attr("data-target","#trailerModal")
@@ -152,12 +158,11 @@ function apiCall(){
                     allow: "acclerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 })
                 $(".modal-body").append(iframeEl)
-                
                 $(".modal-title").text(resTitle+" Trailer")
                 
             })
 
-        
+        }
         
     }).catch(function(error){
     console.log(error)
