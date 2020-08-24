@@ -140,7 +140,7 @@ function apiCall(){
 
         // api to get movie trailer
         var searchTrailer=resTitle+" "+resYear+ " trailer"
-        var urlyoutube="https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q="+searchTrailer+"&key=AIzaSyBPEJPstEOICq_6g87F5v_fd4XGIAK9i_w"
+        var urlyoutube="https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q="+searchTrailer+"&key=AIzaSyB0mkFLwY139m6TA1YrMxUKYfJ1QD6Jiso"
             $.ajax({
                 url: urlyoutube,
                 method: "GET"

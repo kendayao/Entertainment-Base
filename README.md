@@ -72,6 +72,6 @@ For any questions, please contact kendayao at kendayao@gmail.com
 
 Deployed application link: https://kendayao.github.io/MovieBase
 
-Video demo link: 
+Video demo link: https://giphy.com/gifs/KH7wNCx8TUDtYqW267/fullscreen
 
 <img src="images/moviebase.png" width="450" height="300">
