@@ -25,7 +25,7 @@ MovieBase is a responsive web application that provides movie information. Are y
 - jQuery
 - Javascript
 - OMDb API
-- Youtube API
+- YouTube API
 
 
 ## User Story
