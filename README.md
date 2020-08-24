@@ -2,7 +2,7 @@
 
 ## Description
 
-MovieBase is a responsive web application that provides movie information. Are you curious of who directed your favorite movie, who is starring in a particular movie, or you just want to view the trailer? If you are, MovieBase is your one stop application to get this information!
+MovieBase is a responsive web application that provides movie information. Are you curious about who directed your favorite movie, who is starring in a particular movie, or you just want to view the trailer? If you are, MovieBase is your one stop application to get this information!
 
 ## Table of Contents
 
@@ -24,6 +24,8 @@ MovieBase is a responsive web application that provides movie information. Are y
 - Boostrap
 - jQuery
 - Javascript
+- OMDb API
+- Youtube API
 
 
 ## User Story
