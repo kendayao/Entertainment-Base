@@ -2,10 +2,13 @@
 /* #e6b31e */
 /* #fafafa */
 
+*{
+    overflow-x: hidden;
+}
+
 body{
     color: black;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
     font-family: 'PT Sans', sans-serif;
 }
 
